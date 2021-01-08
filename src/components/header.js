@@ -2,7 +2,9 @@ import React from "react"
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
 import { Link } from "gatsby"
+import Hero from "./hero"
 
+// bad for performance - eliminate
 const NavLink = styled(Link)`
   color: whitesmoke;
   font-size: 1rem;
@@ -25,9 +27,10 @@ const NavLink = styled(Link)`
   }
 `
 
+// bad for performance - eliminate
 const TitleLink = styled(Link)`
   color: whitesmoke;
-  font-weight: bold;
+  font-weight: 200;
   margin: 0.5rem 0.5rem 0.5rem 0;
   text-decoration: none;
   font-size: 1.2rem;
@@ -38,6 +41,7 @@ export default function Header() {
   return (
     <header
       css={css`
+        height: 300px;
         background-image: linear-gradient(
           109.6deg,
           rgba(48, 207, 208, 1) 11.2%,
@@ -48,34 +52,40 @@ export default function Header() {
           rgba(32, 38, 57, 1) 11.4%,
           rgba(63, 76, 119, 1) 70.2%
         );
-        height: 300px;
-        /* rgb(0,128,128) teal*/
-        /* rgb(16,23,35, 1) */
+        /* background-image: url("./roman.webp"); */
+        background-size: cover;
+        /* object-fit: cover; */
       `}
     >
       <div
         css={css`
           max-width: 90vw;
           width: 750px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
           margin: 0 auto 4rem;
         `}
       >
-        <TitleLink to="/">Kristjan Vingel</TitleLink>
-        <nav
+        <div
           css={css`
-            margin-top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
           `}
         >
-          <NavLink activeClassName="current-page" to="/">
-            Blog
-          </NavLink>
-          <NavLink activeClassName="current-page" to="/about">
-            About
-          </NavLink>
-        </nav>
+          <TitleLink to="/">Kristjan Vingel</TitleLink>
+          <nav
+            css={css`
+              margin-top: 0;
+            `}
+          >
+            <NavLink activeClassName="current-page" to="/">
+              Blog
+            </NavLink>
+            <NavLink activeClassName="current-page" to="/about">
+              About
+            </NavLink>
+          </nav>
+        </div>
+        <Hero />
       </div>
     </header>
   )

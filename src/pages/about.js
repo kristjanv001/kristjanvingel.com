@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 export default function About() {
   return (
     <Layout>
-      <h1>About me</h1>
+      <h2>About me</h2>
       <p>
         Go back to <Link to="/">homepage</Link>
       </p>

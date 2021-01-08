@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import ReadLink from "./readLink"
 
 export default function PostPreview(props) {
-  //   console.log(props.post)
+  console.log(props.post)
   return (
     <React.Fragment>
       <article

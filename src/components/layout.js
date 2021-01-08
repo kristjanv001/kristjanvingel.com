@@ -1,7 +1,7 @@
 import React from "react"
 import { Global, css } from "@emotion/react"
-import "@fontsource/inter/500.css"
-import "@fontsource/playfair-display/900.css"
+// import "@fontsource/inter/500.css"
+// import "@fontsource/playfair-display/700.css"
 import Header from "./header"
 import { Helmet } from "react-helmet"
 import useSiteMetadata from "../hooks/useSiteMetadata"
@@ -16,6 +16,10 @@ export default function Layout(props) {
           * {
             box-sizing: border-box;
             margin: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+            text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
           }
           /* any element that is placed immediately after any element */
           * + * {
@@ -27,7 +31,8 @@ export default function Layout(props) {
             margin: 0;
 
             color: rgb(35, 35, 35);
-            font-family: Inter;
+            /* font-family: Inter; */
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
             font-weight: 500;
             font-size: 18px;
             line-height: 1.6;
@@ -48,11 +53,12 @@ export default function Layout(props) {
               margin-top: 1.55rem;
               /* margin-bottom: 0.775rem; */
               letter-spacing: -0.04rem;
+              /* font-family: "Playfair Display"; */
 
               /* any element that is placed immediately after a heading element */
               /* see postPreview :first-of-type as well */
               + * {
-                margin-top: 0.5rem;
+                margin-top: 1.5rem;
               }
             }
 

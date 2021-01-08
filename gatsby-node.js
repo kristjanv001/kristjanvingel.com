@@ -2,7 +2,7 @@
 // ===============================================================
 
 // The gatsby-source-filesystem plugin ships with a function for creating slugs.
-const { createFilePath } = require(`gatsby-source-filesystem`)
+const { createFilePath } = require(`gatsby-source-filesystem`) // <==== !!!
 const path = require(`path`)
 
 // To get the file name from the Mdx node we need to traverse the “node graph” to its parent File node, as File nodes contain data we need about files on disk. We use the getNode() helper. Add it to onCreateNode’s function parameters, and call it to get the file node.

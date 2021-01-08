@@ -4,6 +4,8 @@ module.exports = {
     description: `Come check out how Kristjan Vingel can help you level up your life as a software engineer.`,
   },
   plugins: [
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-emotion`,
