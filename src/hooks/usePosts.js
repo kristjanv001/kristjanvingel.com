@@ -3,11 +3,12 @@ import { graphql, useStaticQuery } from "gatsby"
 export default function usePosts() {
   const data = useStaticQuery(graphql`
     {
-      allMdx {
+      allMdx(limit: 1000, sort: { fields: [frontmatter___date], order: DESC }) {
         nodes {
           excerpt
           frontmatter {
             title
+            date(formatString: "MMMM DD, YYYY")
           }
           fields {
             slug
@@ -21,5 +22,6 @@ export default function usePosts() {
     excerpt: post.excerpt,
     title: post.frontmatter.title,
     slug: post.fields.slug,
+    date: post.frontmatter.date,
   }))
 }

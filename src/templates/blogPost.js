@@ -4,38 +4,71 @@ import { css } from "@emotion/react"
 import Layout from "../components/layout"
 import ReadLink from "../components/readLink"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-// import "@fontsource/inter/400.css"
 import Img from "gatsby-image"
+import "@fontsource/inter/900.css"
 
 export default function blogPostTemplate({ data }) {
-  //   console.log(data)
+  // console.log(data)
   return (
     <Layout>
-      <Img fluid={data.mdx.frontmatter.image.childImageSharp.fluid} />
-      <h2>{data.mdx.frontmatter.title}</h2>
+      <h1
+        css={css`
+          font-size: 2.8rem;
+          font-weight: 900;
+          margin-bottom: 0;
+          line-height: 1.1;
+        `}
+      >
+        {data.mdx.frontmatter.title}
+      </h1>
+      <p
+        css={css`
+          margin-top: 0;
+          font-size: 0.8rem;
+          font-weight: 700;
+        `}
+      >
+        {data.mdx.frontmatter.date ? (
+          <span>{data.mdx.frontmatter.date}</span>
+        ) : null}
+      </p>
       <div
         css={css`
-          font-weight: 500;
+          max-width: 100%;
+          margin: 0;
+
+          @media (min-width: 600px) {
+            max-width: 90%;
+            margin: 0 auto 2em;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+          }
+        `}
+      >
+        {data.mdx.frontmatter.image ? (
+          <Img fluid={data.mdx.frontmatter.image.childImageSharp.fluid} />
+        ) : null}
+      </div>
+
+      <div
+        css={css`
+          hyphens: auto;
+          margin-bottom: 2rem;
         `}
       >
         <MDXRenderer>{data.mdx.body}</MDXRenderer>
       </div>
 
-      <p
-        css={css`
-          font-weight: bold;
-        `}
-      >
+      {/* <p>
         {data.mdx.fields.author}
-      </p>
+      </p> */}
       <ReadLink to="/">&larr; back to homepage</ReadLink>
-      <pre>
+      {/* <pre>
         {JSON.stringify(
           data.mdx.frontmatter.image.childImageSharp.fluid,
           null,
           2
         )}
-      </pre>
+      </pre> */}
     </Layout>
   )
 }
@@ -46,9 +79,13 @@ export const query = graphql`
     mdx(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
+        date(formatString: "MMMM DD, YYYY")
         image {
           childImageSharp {
-            fluid {
+            # Specify a fluid image and fragment
+            # The default maxWidth is 800 pixels
+            # quality (int, default: 50)
+            fluid(quality: 80) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -62,24 +99,3 @@ export const query = graphql`
     }
   }
 `
-
-// gatsby blog
-// export const pageQuery = graphql`
-//   query BlogPostBySlug($slug: String!) {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//     markdownRemark(fields: { slug: { eq: $slug } }) {
-//       id
-//       excerpt(pruneLength: 160)
-//       html
-//       frontmatter {
-//         title
-//         date(formatString: "MMMM DD, YYYY")
-//         description
-//       }
-//     }
-//   }
-// `

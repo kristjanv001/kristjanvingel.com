@@ -21,6 +21,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // maxWidth: 200,
+            },
+          },
+        ],
         defaultLayouts: {
           default: require.resolve("./src/components/layout.js"),
         },
@@ -38,3 +46,21 @@ module.exports = {
     },
   ],
 }
+
+/* 
+
+{
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Gatsby Starter Blog`,
+        short_name: `GatsbyJS`,
+        start_url: `/`,
+        background_color: `#fffafa`,
+        theme_color: `#008080`,
+        display: `minimal-ui`,
+        // icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/android-chrome-512x512.png`,
+      },
+    },
+
+*/

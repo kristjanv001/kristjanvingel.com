@@ -1,10 +1,13 @@
 import React from "react"
 import { Global, css } from "@emotion/react"
-// import "@fontsource/inter/500.css"
-// import "@fontsource/playfair-display/700.css"
+import "@fontsource/inter/500.css"
+import "@fontsource/inter/800.css"
+import "@fontsource/pt-serif"
 import Header from "./header"
+import Footer from "../components/footer"
 import { Helmet } from "react-helmet"
 import useSiteMetadata from "../hooks/useSiteMetadata"
+import Hero from "../components/hero"
 
 export default function Layout(props) {
   const { title, description } = useSiteMetadata()
@@ -16,10 +19,10 @@ export default function Layout(props) {
           * {
             box-sizing: border-box;
             margin: 0;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            text-rendering: optimizeLegibility;
-            text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+            /* -webkit-font-smoothing: antialiased; */
+            /* -moz-osx-font-smoothing: grayscale; */
+            /* text-rendering: optimizeLegibility; */
+            /* text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px; */
           }
           /* any element that is placed immediately after any element */
           * + * {
@@ -30,13 +33,14 @@ export default function Layout(props) {
           body {
             margin: 0;
 
-            color: rgb(35, 35, 35);
-            /* font-family: Inter; */
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            /* color: rgb(35, 35, 35); */
+            font-family: "PT Serif";
+            /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
             font-weight: 500;
-            font-size: 18px;
+            font-size: 19px;
             line-height: 1.6;
-            background-color: rgb(250, 250, 250);
+
+            background: whitesmoke;
 
             > div {
               margin-top: 0;
@@ -48,22 +52,20 @@ export default function Layout(props) {
             h4,
             h5,
             h6 {
-              /* line-height: 1.1; */
-              line-height: 1.25;
+              line-height: 1.1;
+              /* line-height: 1.25; */
               margin-top: 1.55rem;
-              /* margin-bottom: 0.775rem; */
+              margin-bottom: 0.775rem;
               letter-spacing: -0.04rem;
-              /* font-family: "Playfair Display"; */
+              font-family: "Inter";
 
               /* any element that is placed immediately after a heading element */
               /* see postPreview :first-of-type as well */
-              + * {
-                margin-top: 1.5rem;
-              }
             }
 
             strong {
-              color: #222;
+              color: #48426d;
+              /* opacity: 0.2; */
             }
 
             li {
@@ -75,6 +77,30 @@ export default function Layout(props) {
               max-width: 90vw;
               width: 750px;
             }
+            p {
+              margin-bottom: 1.1rem;
+            }
+            img {
+              margin: 0;
+            }
+            main {
+              padding: 10px;
+
+              position: relative;
+
+              /* border-radius: 5px; */
+
+              @media (min-width: 600px) {
+                padding: 40px 80px 60px 80px;
+                box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+                margin-top: -20px;
+                background-color: rgb(250, 250, 250);
+              }
+            }
+            nav {
+              padding: 0;
+              margin: 0;
+            }
           }
         `}
       />
@@ -84,21 +110,47 @@ export default function Layout(props) {
         <meta name="description" content={description} />
         <title>{title}</title>
       </Helmet>
-      <Header />
-      <main
+      <div
         css={css`
-          margin-top: -20px;
-          background: #fff;
-
-          padding: 40px 80px 60px 80px;
-          box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
-          position: relative;
-          background: white;
-          border-radius: 5px;
+          background-color: #36096d;
+          background-image: linear-gradient(315deg, #028090 0%, #008080 74%);
+          /* border: 3px solid green; */
         `}
       >
-        <div>{props.children}</div>
+        <Header />
+        {props.hero ? <Hero /> : null}
+      </div>
+      <main>
+        <h2
+          css={css`
+            font-size: 2rem;
+            margin-top: 0;
+            font-weight: 800;
+
+            @media (min-width: 600px) {
+              margin-top: 1.55rem;
+            }
+          `}
+        >
+          {props.title}
+        </h2>
+        {props.children}
       </main>
+      <div
+        css={css`
+          background-color: #36096d;
+          background-image: linear-gradient(315deg, #028090 0%, #008080 74%);
+        `}
+      >
+        {/* <Footer /> */}
+      </div>
     </React.Fragment>
   )
 }
+
+/* 
+
+  @media (min-width: 600px) {
+    font-size: 3rem;
+  }
+*/
