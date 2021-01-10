@@ -41,10 +41,10 @@ export default function About({ data }) {
               font-weight: bolder;
             `}
           >
-            I’m a software engineer who writes.
+            I'm a software engineer who writes.
           </p>
           <p>
-            Welcome to a HTML document in the global system of interconnected
+            Welcome to an HTML document in the global system of interconnected
             computer networks that use the TCP/IP protocol to communicate
             between networks and devices.
           </p>
@@ -56,14 +56,14 @@ export default function About({ data }) {
           </p>
 
           <p>
-            Yet, something pulled me into the creative areas of life such as
+            Yet, something pulled me into the creative areas of life, such as
             writing and photography.
           </p>
 
           <p>
             It was in one late evening in a small but cozy room in Taipei where
             I discovered the field of front-end development. I knew instantly
-            that I've found what I've been looking for. I started learning HTML
+            that I've found what I've been looking for and began learning HTML
             the very next day. The rest is history.
           </p>
 
@@ -74,8 +74,8 @@ export default function About({ data }) {
 
           <p>
             I enjoy coding up beautiful user interfaces that provide the best
-            possible experience for the user. Through code I can express myself
-            artistically while satisfying my curiousity for technology.
+            possible experience for the user. Through code, I can express myself
+            artistically while satisfying my curiosity for technology.
           </p>
 
           <p>
