@@ -1,7 +1,5 @@
 import React from "react"
-// import styled from "@emotion/styled"
 import { css } from "@emotion/react"
-// import { Link, graphql, useStaticQuery } from "gatsby"
 import "@fontsource/pt-serif"
 export default function Hero() {
   return (
@@ -15,7 +13,6 @@ export default function Hero() {
           padding: 0 0 2em;
 
           @media (min-width: 600px) {
-            /* padding: 4em 0; */
             padding: 0 0 4em;
           }
         `}
@@ -26,7 +23,6 @@ export default function Hero() {
             font-weight: bold;
             font-size: 1.6rem;
             margin: 0;
-            /* font-style: italic; */
             font-family: "Inter";
 
             @media (min-width: 600px) {
@@ -35,7 +31,8 @@ export default function Hero() {
             }
           `}
         >
-          I'm an Estonian coder who likes to help people with self-improvement.
+          I'm an <span>Estonian</span> coder who likes to help people with
+          self-improvement.
         </p>
       </div>
     </React.Fragment>

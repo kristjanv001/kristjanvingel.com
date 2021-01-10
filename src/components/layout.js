@@ -44,7 +44,7 @@ export default function Layout(props) {
               font-family: "PT Serif";
               /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
               font-weight: 500;
-              font-size: 19px;
+              font-size: 20px;
               line-height: 1.6;
               color: black;
 
@@ -62,7 +62,7 @@ export default function Layout(props) {
               h6 {
                 line-height: 1.1;
                 /* line-height: 1.25; */
-                margin-top: 1.55rem;
+                margin-top: 0;
                 margin-bottom: 0.775rem;
                 letter-spacing: -0.04rem;
                 font-family: "Inter";
@@ -77,12 +77,6 @@ export default function Layout(props) {
               li {
                 margin-top: 0.25rem;
               }
-
-              main {
-                margin: 2rem auto 4rem;
-                max-width: 90vw;
-                width: 750px;
-              }
               p {
                 margin-bottom: 1.1rem;
               }
@@ -90,12 +84,12 @@ export default function Layout(props) {
                 margin: 0;
               }
               main {
+                margin: 2rem auto 4rem;
+                max-width: 90vw;
+                width: 750px;
                 padding: 10px;
-
                 position: relative;
-
                 /* border-radius: 5px; */
-
                 @media (min-width: 600px) {
                   padding: 40px 80px 60px 80px;
                   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -138,19 +132,23 @@ export default function Layout(props) {
           {props.hero ? <Hero /> : null}
         </div>
         <main>
-          <h2
-            css={css`
-              font-size: 2rem;
-              margin-top: 0;
-              font-weight: 800;
-              color: #f1695e;
-              @media (min-width: 600px) {
-                margin-top: 1.55rem;
-              }
-            `}
-          >
-            {props.title}
-          </h2>
+          {props.title && (
+            <h2
+              css={css`
+                font-size: 2rem;
+                margin-top: 0;
+                font-weight: 800;
+                color: #f1695e;
+
+                @media (min-width: 600px) {
+                  /* margin-top: 1.55rem; */
+                }
+              `}
+            >
+              {props.title}
+            </h2>
+          )}
+
           {props.children}
         </main>
         <div
