@@ -35,8 +35,7 @@ export default function Hero() {
             }
           `}
         >
-          I'm an Estonian software-engineer who likes to help people with
-          self-improvement.
+          I'm an Estonian coder who likes to help people with self-improvement.
         </p>
       </div>
     </React.Fragment>

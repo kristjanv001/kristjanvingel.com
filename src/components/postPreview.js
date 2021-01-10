@@ -4,8 +4,6 @@ import styled from "@emotion/styled"
 import { Link } from "gatsby"
 // import ReadLink from "./readLink"
 import "@fontsource/pt-serif"
-import "@fontsource/playfair-display/900.css"
-import "@fontsource/playfair-display/700.css"
 
 const PostPreviewLink = styled(Link)`
   /* color: teal; */

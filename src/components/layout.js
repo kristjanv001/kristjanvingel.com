@@ -115,7 +115,10 @@ export default function Layout(props) {
                 color: whitesmoke;
               }
               a {
-                color: #020086;
+                color: #000080;
+              }
+              figcaption {
+                font-size: 0.8rem;
               }
             }
           `}
@@ -128,12 +131,7 @@ export default function Layout(props) {
         </Helmet>
         <div
           css={css`
-            /* background-color: #36096d; */
-            /* background-image: linear-gradient(315deg, #028090 0%, #008080 74%); */
-            /* background-color: rgb(250, 250, 250); */
-            /* background-image: linear-gradient(315deg, #028090 0%, #008080 74%); */
-
-            background: #020086;
+            background: #000080;
           `}
         >
           <Header />
@@ -157,7 +155,7 @@ export default function Layout(props) {
         </main>
         <div
           css={css`
-            background: #020086;
+            background: #000080;
           `}
         >
           <Footer />

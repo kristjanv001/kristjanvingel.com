@@ -1,44 +1,113 @@
 import React from "react"
 import Layout from "../components/layout"
 import { css } from "@emotion/react"
+import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import "@fontsource/inter/600.css"
 
-export default function About() {
+export default function About({ data }) {
   return (
     <Layout title="About">
-      <p>
-        Welcome to a HTML document in the global system of interconnected
-        computer networks that use the TCP/IP protocol to communicate between
-        networks and devices.
-      </p>
-      <p>
-        My name is <strong>Kristjan Vingel</strong>, I'm a front-end engineer
-        who likes to write and this is my personal website.
-      </p>
-
-      <p>
-        I am currently working on personal projects using{" "}
-        <strong>JavaScript</strong>, <strong>React</strong>, and recently also
-        GraphQL.
-      </p>
-
-      <p>
-        Since blogging is a huge passion of mine, I drop my nuggets of gold here
-        from time to time.
-      </p>
-
-      <p>I'd be happy to hear about your ideas.</p>
-      <p
+      <div
         css={css`
-          font-family: Inter;
-          /* font-weight: 600; */
+          display: flex;
+          flex-direction: column-reverse;
+
+          @media (min-width: 600px) {
+            display: block;
+          }
         `}
       >
-        <span role="img" aria-label="mailbox-emoji">
-          📭
-        </span>{" "}
-        <strong>kristjan.vingel@protonmail.ch</strong>
-      </p>
+        <div
+          css={css`
+            width: 100%;
+
+            @media (min-width: 600px) {
+              max-width: 200px;
+              float: right;
+              margin-left: 10px;
+            }
+          `}
+        >
+          <figure>
+            <Img fluid={data.file.childImageSharp.fluid} />
+            <figcaption>This is me in Brussels, 2018</figcaption>
+          </figure>
+        </div>
+
+        <div>
+          <p
+            css={css`
+              font-weight: bolder;
+            `}
+          >
+            I’m a software engineer who writes.
+          </p>
+          <p>
+            Welcome to a HTML document in the global system of interconnected
+            computer networks that use the TCP/IP protocol to communicate
+            between networks and devices.
+          </p>
+
+          <p>
+            Although I have always been into computers, I never imagined being
+            an engineer writing code. In fact, I have an LLM degree in the field
+            of tax law. I was supposed to become a tax lawyer.
+          </p>
+
+          <p>
+            Yet, something pulled me into the creative areas of life such as
+            writing and photography.
+          </p>
+
+          <p>
+            It was in one late evening in a small but cozy room in Taipei where
+            I discovered the field of front-end development. I knew instantly
+            that I've found what I've been looking for. I started learning HTML
+            the very next day. The rest is history.
+          </p>
+
+          <p>
+            Today I work on personal projects using tools and languages such as{" "}
+            <strong>JavaScript</strong>, <strong>React</strong> and GraphQL.
+          </p>
+
+          <p>
+            I enjoy coding up beautiful user interfaces that provide the best
+            possible experience for the user. Through code I can express myself
+            artistically while satisfying my curiousity for technology.
+          </p>
+
+          <p>
+            If you want to tell me something, feel free to email me. I'd be
+            happy to hear about your ideas.
+          </p>
+          <p
+            css={css`
+              font-family: Inter;
+              /* font-weight: 600; */
+            `}
+          >
+            <span role="img" aria-label="mailbox-emoji">
+              📭
+            </span>{" "}
+            <strong>kristjan.vingel@protonmail.ch</strong>
+          </p>
+        </div>
+      </div>
     </Layout>
   )
 }
+
+export const query = graphql`
+  query {
+    file(relativePath: { eq: "me.jpg" }) {
+      absolutePath
+      childImageSharp {
+        fluid(quality: 80) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
