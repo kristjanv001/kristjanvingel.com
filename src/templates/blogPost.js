@@ -73,7 +73,6 @@ export default function blogPostTemplate({ data }) {
   )
 }
 
-// this query loads the data
 export const query = graphql`
   query($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {

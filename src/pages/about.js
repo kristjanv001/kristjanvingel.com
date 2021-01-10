@@ -31,7 +31,7 @@ export default function About() {
       <p
         css={css`
           font-family: Inter;
-          font-weight: 600;
+          /* font-weight: 600; */
         `}
       >
         <span role="img" aria-label="mailbox-emoji">

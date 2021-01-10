@@ -11,11 +11,12 @@ export default function Hero() {
           max-width: 90vw;
           width: 750px;
           margin: 0 auto;
-          color: whitesmoke;
-          padding: 1em 0 3em;
+          color: white;
+          padding: 0 0 2em;
 
           @media (min-width: 600px) {
-            padding: 2em 0 4em;
+            /* padding: 4em 0; */
+            padding: 0 0 4em;
           }
         `}
       >
@@ -23,10 +24,10 @@ export default function Hero() {
           css={css`
             line-height: 1.4;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.6rem;
             margin: 0;
             /* font-style: italic; */
-            font-family: "PT Serif";
+            font-family: "Inter";
 
             @media (min-width: 600px) {
               font-size: 1.9rem;
@@ -34,8 +35,8 @@ export default function Hero() {
             }
           `}
         >
-          If I'm not blogging about life-altering books or self-improvement,
-          then I must be building something amazing.
+          I'm an Estonian software-engineer who likes to help people with
+          self-improvement.
         </p>
       </div>
     </React.Fragment>

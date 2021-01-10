@@ -7,7 +7,7 @@ import "@fontsource/inter/500.css"
 
 export default function Footer() {
   return (
-    <React.Fragment>
+    <footer>
       <div
         css={css`
           max-width: 90vw;
@@ -15,9 +15,19 @@ export default function Footer() {
           margin: 0 auto;
           color: whitesmoke;
           padding: 1em 0;
-
+          font-family: Inter;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          > div {
+            margin: 0;
+          }
           @media (min-width: 600px) {
-            padding: 2em 0;
+            padding: 6em 0;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
           }
         `}
       >
@@ -26,17 +36,37 @@ export default function Footer() {
             line-height: 1.4;
             font-size: 1.2rem;
             margin: 0;
-            font-family: Inter;
+
+            text-transform: uppercase;
 
             @media (min-width: 600px) {
-              font-size: 1.9rem;
+              /* font-size: 1.9rem; */
               max-width: 80%;
             }
           `}
         >
           Kristjan Vingel
         </p>
+        <div
+          css={css`
+            display: flex;
+            align-items: center;
+            > p {
+              margin: 0;
+              margin-right: 0.5em;
+              /* background: yellow; */
+            }
+            > a {
+              margin: 0;
+            }
+          `}
+        >
+          <p>
+            <a href="https://github.com/kristjanv001">Github</a>
+          </p>
+          <a href="https://twitter.com/kristjanv001">Twitter</a>
+        </div>
       </div>
-    </React.Fragment>
+    </footer>
   )
 }

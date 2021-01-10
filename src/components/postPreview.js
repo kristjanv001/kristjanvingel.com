@@ -8,13 +8,12 @@ import "@fontsource/playfair-display/900.css"
 import "@fontsource/playfair-display/700.css"
 
 const PostPreviewLink = styled(Link)`
-  color: teal;
+  /* color: teal; */
   text-decoration: none;
 `
 
 const PostDateP = styled("p")`
   margin-top: 0;
-  /* font-family: "Playfair Display"; */
   font-size: 0.8rem;
   font-weight: 700;
   margin-bottom: 0;
@@ -33,7 +32,6 @@ export default function PostPreview(props) {
         <PostPreviewLink to={props.post.slug}>
           <h3
             css={css`
-              /* font-family: "Playfair Display"; */
               font-weight: 800;
               margin-bottom: 0;
               font-size: 1.25rem;
