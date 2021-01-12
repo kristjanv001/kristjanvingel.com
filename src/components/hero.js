@@ -1,6 +1,7 @@
 import React from "react"
 import { css } from "@emotion/react"
 import "@fontsource/pt-serif"
+import "@fontsource/inter/500.css"
 export default function Hero() {
   return (
     <React.Fragment>
@@ -19,20 +20,36 @@ export default function Hero() {
       >
         <p
           css={css`
-            line-height: 1.4;
+            line-height: 1.2;
             font-weight: bold;
-            font-size: 1.6rem;
+            font-size: 1.7rem;
             margin: 0;
             font-family: "Inter";
 
             @media (min-width: 600px) {
-              font-size: 1.9rem;
+              font-size: 3rem;
+              max-width: 100%;
+            }
+          `}
+        >
+          I make people's lives easier and encourage them to become more
+          amazing.
+        </p>
+        <p
+          css={css`
+            line-height: 1.4;
+            font-weight: 500;
+            font-size: 1rem;
+            margin-top: 1em;
+            font-family: "Inter";
+
+            @media (min-width: 600px) {
+              font-size: 1.2rem;
               max-width: 80%;
             }
           `}
         >
-          I'm an <span>Estonian</span> coder who likes to help people with
-          self-improvement.
+          Front-end engineer from Tallinn, Estonia
         </p>
       </div>
     </React.Fragment>

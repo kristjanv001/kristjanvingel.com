@@ -20,6 +20,7 @@ export default function Footer() {
           flex-direction: column;
           justify-content: center;
           align-items: center;
+
           > div {
             margin: 0;
           }

@@ -23,7 +23,11 @@ export default function PostPreview(props) {
       <article
         css={css`
           :first-of-type {
-            margin-top: 2rem;
+            margin-top: 1rem;
+
+            @media (min-width: 600px) {
+              margin-top: 2rem;
+            }
           }
         `}
       >

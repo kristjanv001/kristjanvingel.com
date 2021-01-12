@@ -4,6 +4,18 @@ module.exports = {
     description: `Come check out how Kristjan Vingel can help you level up your life as a software engineer.`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Kristjan Vingel Website`,
+        short_name: `kristjan`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: "/static/estonia.png",
+      },
+    },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,

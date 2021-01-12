@@ -77,21 +77,8 @@ export default function About({ data }) {
             possible experience for the user. Through code, I can express myself
             artistically while satisfying my curiosity for technology.
           </p>
-
           <p>
-            If you want to tell me something, feel free to email me. I'd be
-            happy to hear about your ideas.
-          </p>
-          <p
-            css={css`
-              font-family: Inter;
-              /* font-weight: 600; */
-            `}
-          >
-            <span role="img" aria-label="mailbox-emoji">
-              📭
-            </span>{" "}
-            <strong>kristjan.vingel@protonmail.ch</strong>
+            I'm truly happy and grateful to be able to do what I really love.
           </p>
         </div>
       </div>
