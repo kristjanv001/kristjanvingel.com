@@ -22,6 +22,7 @@ export default function Layout(props) {
           * {
             box-sizing: border-box;
             margin: 0;
+
             /* -webkit-font-smoothing: antialiased; */
             /* -moz-osx-font-smoothing: grayscale; */
             /* text-rendering: optimizeLegibility; */
