@@ -5,14 +5,14 @@ const StyledMobileNavButton = styled.button`
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
-  width: 1.5rem;
-  height: 1.5rem;
+  /* width: 2rem; */
+  height: 2rem;
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 2px;
+  /* padding: 2px; */
   margin: 0;
-  z-index: 10;
+  z-index: 90;
 
   :focus {
     outline: none;
@@ -21,9 +21,9 @@ const StyledMobileNavButton = styled.button`
   div {
     background: white;
     transition: transform 250ms cubic-bezier(0.2, 0.6, 0.3, 1);
-    display: block;
+    /* display: block; */
     margin: auto;
-    width: 100%;
+    width: 2rem;
     height: 1px;
     transform-origin: 1px;
 

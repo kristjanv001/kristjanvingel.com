@@ -34,8 +34,15 @@ export default function Layout(props) {
           }
           html {
             background: #000080;
+            margin: 0;
+            padding: 0;
           }
+
           html,
+          body {
+            overflow: ${isOpen ? "hidden" : "auto"};
+          }
+
           body {
             margin: 0;
             font-family: "PT Serif";
@@ -44,7 +51,6 @@ export default function Layout(props) {
             line-height: 1.6;
             color: black;
             background: whitesmoke;
-            overflow: ${isOpen ? "hidden" : "auto"};
 
             > div {
               margin-top: 0;

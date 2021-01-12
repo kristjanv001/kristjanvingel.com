@@ -73,6 +73,7 @@ export default function Header(props) {
   return (
     <header
       css={css`
+        z-index: 1;
         font-family: Inter;
         /* padding: 2em 0; */
         display: flex;
