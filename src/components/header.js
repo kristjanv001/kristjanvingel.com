@@ -6,7 +6,7 @@ import "@fontsource/inter/200.css"
 import "@fontsource/inter/400.css"
 import "@fontsource/inter/600.css"
 import "@fontsource/inter/900.css"
-import MobileMenuIcon from "./mobileMenuIcon"
+// import MobileMenuIcon from "./mobileMenuIcon"
 
 // bad for performance?
 const NavLink = styled(Link)`
@@ -110,7 +110,7 @@ export default function Header(props) {
               align-items: center;
             `}
           >
-            <div
+            {/* <div
               tabIndex={0}
               role="button"
               onKeyDown={() => props.setIsOpen(prevState => !prevState)}
@@ -122,7 +122,7 @@ export default function Header(props) {
               `}
             >
               <MobileMenuIcon isOpen={props.isOpen} />
-            </div>
+            </div> */}
 
             <div
               css={css`
