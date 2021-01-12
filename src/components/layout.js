@@ -44,7 +44,7 @@ export default function Layout(props) {
             line-height: 1.6;
             color: black;
             background: whitesmoke;
-            overflow: ${isOpen ? "hidden" : "normal"};
+            overflow: ${isOpen ? "hidden" : "auto"};
 
             > div {
               margin-top: 0;
