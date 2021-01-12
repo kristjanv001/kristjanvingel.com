@@ -118,6 +118,7 @@ export default function Header(props) {
               onKeyDown={() => props.setIsOpen(prevState => !prevState)}
               onClick={() => props.setIsOpen(prevState => !prevState)}
               css={css`
+                outline: none;
                 @media (min-width: 600px) {
                   display: none;
                 }
