@@ -12,8 +12,7 @@ const StyledMobileNavButton = styled.button`
   cursor: pointer;
   /* padding: 2px; */
   margin: 0;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
 
   :focus {
     outline: none;
