@@ -12,7 +12,6 @@ const StyledMobileNavButton = styled.button`
   cursor: pointer;
   /* padding: 2px; */
   margin: 0;
-  z-index: 90;
 
   :focus {
     outline: none;

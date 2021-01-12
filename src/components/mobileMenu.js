@@ -7,7 +7,7 @@ const MobileMenuLinks = styled.nav`
   opacity: ${props => (props.isOpen ? "1" : "0")};
 
   /* transform: ${props => (props.isOpen ? "scale(1)" : "scale(0)")}; */
-  visibility: ${props => (props.isOpen ? "visible" : "hidden")};
+  /* visibility: ${props => (props.isOpen ? "visible" : "hidden")}; */
   /* transform: ${props =>
     props.isOpen ? "translateX(0)" : "translateX(-100%)"}; */
   display: flex;
@@ -16,17 +16,18 @@ const MobileMenuLinks = styled.nav`
   align-items: center;
   text-align: center;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   background: #000080;
-  height: calc(100vh - 100px);
+  /* height: calc(100vh - 100px); */
+  height: 100vh;
+  z-index: 1;
   transition: transform 0.3s ease-in;
   transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  z-index: 99;
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
-  border-top: #f1695e 1px solid;
+  /* border-top: #f1695e 1px solid; */
 
   @media (min-width: 600px) {
     display: none;
