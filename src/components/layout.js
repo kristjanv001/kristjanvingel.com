@@ -35,7 +35,6 @@ export default function Layout(props) {
             margin-top: 0.465rem;
           }
           html {
-            background: #000080;
             margin: 0;
             padding: 0;
           }
@@ -52,7 +51,7 @@ export default function Layout(props) {
             font-size: 20px;
             line-height: 1.6;
             color: black;
-            background: whitesmoke;
+            background: #000080;
 
             > div {
               margin-top: 0;
@@ -137,41 +136,46 @@ export default function Layout(props) {
       </Helmet>
       <div
         css={css`
-          background: #000080;
+          background: whitesmoke;
         `}
       >
-        <Header setIsOpen={setIsOpen} isOpen={isOpen} />
-        {/* {isOpen && <MobileMenu isOpen={isOpen} />} */}
-        <MobileMenu isOpen={isOpen} />
-        {props.hero ? <Hero /> : null}
-      </div>
-      <main>
-        {props.title && (
-          <h2
-            css={css`
-              font-size: 2rem;
-              margin-top: 0;
-              font-weight: 800;
-              color: #f1695e;
+        <div
+          css={css`
+            background: #000080;
+          `}
+        >
+          <Header setIsOpen={setIsOpen} isOpen={isOpen} />
+          {/* {isOpen && <MobileMenu isOpen={isOpen} />} */}
+          <MobileMenu isOpen={isOpen} />
+          {props.hero ? <Hero /> : null}
+        </div>
+        <main>
+          {props.title && (
+            <h2
+              css={css`
+                font-size: 2rem;
+                margin-top: 0;
+                font-weight: 800;
+                color: #f1695e;
 
-              @media (min-width: 600px) {
-                /* margin-top: 1.55rem; */
-              }
-            `}
-          >
-            {props.title}
-          </h2>
-        )}
+                @media (min-width: 600px) {
+                  /* margin-top: 1.55rem; */
+                }
+              `}
+            >
+              {props.title}
+            </h2>
+          )}
 
-        {props.children}
-      </main>
-
-      <div
-        css={css`
-          background: #000080;
-        `}
-      >
-        <Footer />
+          {props.children}
+        </main>
+        <div
+          css={css`
+            background: #000080;
+          `}
+        >
+          <Footer />
+        </div>
       </div>
     </React.Fragment>
   )
