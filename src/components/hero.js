@@ -27,13 +27,12 @@ export default function Hero() {
             font-family: "Inter";
 
             @media (min-width: 600px) {
-              font-size: 3rem;
-              max-width: 100%;
+              font-size: 3.2rem;
+              max-width: 90%;
             }
           `}
         >
-          I make people's lives easier and encourage them to become more
-          amazing.
+          I make people's lives better by sharing invaluable insights.
         </p>
         <p
           css={css`

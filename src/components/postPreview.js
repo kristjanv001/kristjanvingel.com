@@ -37,6 +37,10 @@ export default function PostPreview(props) {
               font-weight: 800;
               margin-bottom: 0;
               font-size: 1.25rem;
+
+              @media (min-width: 600px) {
+                font-size: 1.5rem;
+              }
             `}
           >
             {props.post.title}

@@ -61,14 +61,17 @@ export default function About({ data }) {
           </p>
 
           <p>
-            It was in one late evening in a small but cozy room in Taipei where
-            I discovered the field of front-end development. I knew instantly
-            that I've found what I've been looking for and began learning HTML
-            the very next day. The rest is history.
+            It was in one late evening in a{" "}
+            <a href="https://goo.gl/maps/7SF4eDeHrm4KuD4G7">
+              small but cozy room in Taipei
+            </a>{" "}
+            where I discovered the field of front-end development. I knew
+            instantly that I've found what I've been looking for and began
+            learning HTML the very next day. The rest is history.
           </p>
 
           <p>
-            Today I work on personal projects using tools and languages such as{" "}
+            Today I work on projects using tools and languages such as{" "}
             <strong>JavaScript</strong>, <strong>React</strong> and GraphQL.
           </p>
 
