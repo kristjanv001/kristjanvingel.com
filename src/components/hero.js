@@ -48,7 +48,7 @@ export default function Hero() {
             }
           `}
         >
-          Front-end engineer from Tallinn, Estonia
+          Software engineer from Tallinn, Estonia
         </p>
       </div>
     </React.Fragment>
