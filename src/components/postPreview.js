@@ -11,10 +11,10 @@ const PostPreviewLink = styled(Link)`
 `
 
 const PostDateP = styled("p")`
-  margin-top: 0;
-  font-size: 0.8rem;
+  bottom: 0;
+  margin-top: 2px;
+  font-size: 0.9rem;
   font-weight: 700;
-  margin-bottom: 0;
 `
 
 export default function PostPreview(props) {

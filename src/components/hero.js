@@ -10,6 +10,7 @@ export default function Hero() {
           max-width: 90vw;
           width: 750px;
           margin: 0 auto;
+          /* color: #babaef; */
           color: white;
           padding: 0 0 2em;
 

@@ -23,8 +23,8 @@ export default function blogPostTemplate({ data }) {
       </h1>
       <p
         css={css`
-          margin-top: 0;
-          font-size: 0.8rem;
+          margin-top: 2px;
+          font-size: 0.9rem;
           font-weight: 700;
         `}
       >
