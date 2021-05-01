@@ -2,6 +2,7 @@ import React from "react"
 import { css } from "@emotion/react"
 import "@fontsource/pt-serif"
 import "@fontsource/inter/500.css"
+
 export default function Hero() {
   return (
     <React.Fragment>
@@ -35,6 +36,7 @@ export default function Hero() {
         >
           I make people's lives better by sharing invaluable insights.
         </p>
+
         <p
           css={css`
             line-height: 1.4;
@@ -51,6 +53,7 @@ export default function Hero() {
         >
           Software engineer from Tallinn, Estonia
         </p>
+
       </div>
     </React.Fragment>
   )

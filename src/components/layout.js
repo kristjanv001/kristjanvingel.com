@@ -181,7 +181,7 @@ export default function Layout(props) {
   )
 }
 
-/* 
+/*
 
   @media (min-width: 600px) {
     font-size: 3rem;
