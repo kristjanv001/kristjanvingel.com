@@ -98,6 +98,7 @@ export default function Layout(props) {
                 box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
                 margin-top: -20px;
                 background-color: rgb(250, 250, 250);
+                /* background-color: black; */
               }
             }
             nav {
@@ -137,11 +138,13 @@ export default function Layout(props) {
       <div
         css={css`
           background: whitesmoke;
+          /* background: black; */
         `}
       >
         <div
           css={css`
             background: #000080;
+            /* background: black; */
           `}
         >
           <Header setIsOpen={setIsOpen} isOpen={isOpen} />

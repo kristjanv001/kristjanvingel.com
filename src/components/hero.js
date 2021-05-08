@@ -53,23 +53,7 @@ export default function Hero() {
         >
           Software engineer from Tallinn, Estonia
         </p>
-
       </div>
     </React.Fragment>
   )
 }
-
-/* <img
-        src="./snow.png"
-        css={css`
-          background-size: contain;
-          object-fit: contain;
-          z-index: 99;
-          height: 290px;
-        `}
-      ></img> */
-
-/* I’m an Estonian software <strong>engineer</strong>. If I'm not{" "}
-        <strong>blogging</strong> about life-altering books or{" "}
-        <strong>self improvement</strong>, then I must be building something
-        amazing. */
