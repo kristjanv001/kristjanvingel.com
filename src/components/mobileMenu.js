@@ -4,10 +4,10 @@ import React from "react"
 import { Link } from "gatsby"
 
 const MobileMenuLinks = styled.nav`
-  opacity: ${props => (props.isOpen ? "1" : "0")};
+  /* visibility: ${props => (props.isOpen ? "1" : "0")}; */
 
   /* transform: ${props => (props.isOpen ? "scale(1)" : "scale(0)")}; */
-  /* visibility: ${props => (props.isOpen ? "visible" : "hidden")}; */
+  visibility: ${props => (props.isOpen ? "visible" : "hidden")};
   /* transform: ${props =>
     props.isOpen ? "translateX(0)" : "translateX(-100%)"}; */
   display: flex;
