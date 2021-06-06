@@ -79,7 +79,8 @@ export default function Header(props) {
         /* padding: 2em 0; */
         display: flex;
         height: 100px;
-        /* border: 5px solid magenta; */
+
+        width: 100%;
 
         @media (min-width: 600px) {
           /* padding: 4em 0; */

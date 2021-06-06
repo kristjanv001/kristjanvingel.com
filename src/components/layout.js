@@ -9,6 +9,28 @@ import { Helmet } from "react-helmet"
 import useSiteMetadata from "../hooks/useSiteMetadata"
 import Hero from "../components/hero"
 import MobileMenu from "./mobileMenu"
+import { BackTop } from "antd"
+import { UpOutlined } from "@ant-design/icons"
+
+const style = {
+  height: 60,
+  width: 60,
+  lineHeight: "40px",
+  borderRadius: 999,
+  backgroundColor: "#000080",
+  color: "#fff",
+  textAlign: "center",
+  fontSize: 22,
+  position: "fixed",
+  bottom: 10,
+  right: 10,
+  zIndex: 100,
+  opacity: 0.8,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  cursor: "pointer",
+}
 
 export default function Layout(props) {
   const { title, description } = useSiteMetadata()
@@ -138,9 +160,13 @@ export default function Layout(props) {
       <div
         css={css`
           background: whitesmoke;
-          /* background: black; */
         `}
       >
+        <BackTop visibilityHeight="1000">
+          <div style={style}>
+            <UpOutlined />
+          </div>
+        </BackTop>
         <div
           css={css`
             background: #000080;
@@ -169,9 +195,9 @@ export default function Layout(props) {
               {props.title}
             </h2>
           )}
-
           {props.children}
         </main>
+
         <div
           css={css`
             background: #000080;
