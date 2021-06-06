@@ -20,7 +20,7 @@ const MobileMenuLinks = styled.nav`
   background: #000080;
   /* height: calc(100vh - 100px); */
   height: 100vh;
-  z-index: 1;
+  z-index: 110;
   transition: transform 0.3s ease-in;
   transition: opacity 400ms cubic-bezier(0.4, 0, 0.2, 1);
 
